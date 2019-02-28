@@ -34,9 +34,9 @@ plt.scatter(df['luas'], df['harga'], color='r', marker='o', s=50)
 plt.plot(df['luas'], model.predict(df[['luas']]), 'g-')
 plt.scatter(df['luas'], model.predict(df[['luas']]), color='g', marker='*', s=50)
 
-plt.xlabel('Nilai X')
-plt.ylabel('Nilai Y')
-plt.title('Linear Regression')
+plt.xlabel('Luas Tanah (ha)')
+plt.ylabel('Harga Tanah (Rp)')
+plt.title('Harga Tanah')
 plt.show()
 
 # =========================
