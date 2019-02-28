@@ -4,7 +4,7 @@
 
 ### **Basic Formula**
 
-Here is the basic formula of linear regression, especially on how to solve the value of _**m** (slope)_ & _**b** (intercept)_ of the **best fit line**:
+In statistics, __linear regression__ is a linear approach to modelling the relationship between a scalar response (or dependent variable) and one or more explanatory variables (or independent variables). Here is the basic formula of linear regression, especially on how to solve the value of _**m** (slope)_ & _**b** (intercept)_ of the **best fit line**:
 
 ![Rumus Linear Regression](./0_aformula.png)
 
