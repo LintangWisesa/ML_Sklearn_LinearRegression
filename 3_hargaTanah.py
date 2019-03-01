@@ -46,4 +46,9 @@ tanahSaya = {
     'luas': [500, 1234, 4200, 2345]
 }
 dfTanahSaya = pd.DataFrame(tanahSaya)
+
 print(model.predict(dfTanahSaya))
+print(model.predict(dfTanahSaya[['luas']]))
+
+# accuracy:
+print(model.score(df[['luas']], df['harga']))
