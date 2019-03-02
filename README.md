@@ -23,6 +23,7 @@ Here is the example of linear regression using Microsoft Excel. Clone/download t
 Clone/download this repo, open & run python script: __*2_plot_bestFitLine.py*__. It will create a plot figure of dataset with its best fit line. Make sure you have installed __*pandas*__, __*numpy*__, __*matplotlib*__ & __*sklearn*__ packages!
 
 ```python
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -59,19 +60,33 @@ print(model.predict([[8]]))
 
 # plot dataframe
 plt.plot(df['x'], df['y'], 'r-')
-plt.scatter(df['x'], df['y'], color='r', marker='o', s=50)
 
 # plot best fit line
 plt.plot(df['x'], model.predict(df[['x']]), 'g-')
-plt.scatter(df['x'], model.predict(df[['x']]), color='g', marker='*', s=50)
+
+# scatter dataframe
+plt.scatter(df['x'], df['y'], color='r', marker='o', s=50)
+
+# scatter best fit line
+plt.scatter(df['x'], model.predict(df[['x']]), color='g', marker='o', s=50)
 
 plt.xlabel('Nilai X')
 plt.ylabel('Nilai Y')
 plt.title('Linear Regression')
+plt.legend(['Dataset', 'Best Fit Line'])
 plt.show()
+
 ```
 
 ![Linear Regression](./2_plot_bestFitLine.png)
+
+#
+
+### **Case Example**
+
+Provided a __csv__ file contains a dataset about land size & its price (open *3_hargaTanah.csv*). Run *3_hargaTanah.py* and it will create the prediction of land price based on its size. Here is the graph:
+
+![Linear Regression](./3_hargaTanah.png)
 
 #
 

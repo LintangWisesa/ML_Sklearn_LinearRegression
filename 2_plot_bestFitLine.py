@@ -36,14 +36,19 @@ print(model.predict([[8]]))
 
 # plot dataframe
 plt.plot(df['x'], df['y'], 'r-')
-plt.scatter(df['x'], df['y'], color='r', marker='o', s=50)
 
 # plot best fit line
 plt.plot(df['x'], model.predict(df[['x']]), 'g-')
-plt.scatter(df['x'], model.predict(df[['x']]), color='g', marker='*', s=50)
+
+# scatter dataframe
+plt.scatter(df['x'], df['y'], color='r', marker='o', s=50)
+
+# scatter best fit line
+plt.scatter(df['x'], model.predict(df[['x']]), color='g', marker='o', s=50)
 
 plt.xlabel('Nilai X')
 plt.ylabel('Nilai Y')
 plt.title('Linear Regression')
+plt.legend(['Dataset', 'Best Fit Line'])
 plt.show()
 

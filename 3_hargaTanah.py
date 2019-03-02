@@ -28,12 +28,17 @@ print('Intercept = ', model.intercept_)
 
 # # plot dataframe
 plt.plot(df['luas'], df['harga'], 'r-')
-plt.scatter(df['luas'], df['harga'], color='r', marker='o', s=50)
 
 # # plot best fit line
 plt.plot(df['luas'], model.predict(df[['luas']]), 'g-')
+
+# scatter dataframe
+plt.scatter(df['luas'], df['harga'], color='r', marker='o', s=50)
+
+# scatter best fit line
 plt.scatter(df['luas'], model.predict(df[['luas']]), color='g', marker='*', s=50)
 
+plt.legend(['Dataset', 'Best Fit Line'])
 plt.xlabel('Luas Tanah (ha)')
 plt.ylabel('Harga Tanah (Rp)')
 plt.title('Harga Tanah')
